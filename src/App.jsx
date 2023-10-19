@@ -15,11 +15,10 @@ function App() {
   }, []);
   console.log(data);
   return (
-    <div className="flex flex-col justify-center m-24">
+    <div className="flex flex-col justify-center m-24 mb-12">
       <Nav />
-      <HomeProfilePage />
+      {/* <HomeProfilePage /> */}
       <RepoPages />
-
     </div>
   );
 }

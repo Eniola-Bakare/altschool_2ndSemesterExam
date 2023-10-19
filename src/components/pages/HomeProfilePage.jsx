@@ -3,11 +3,11 @@ import Footer from "../UI/Footer";
 function HomeProfilePage() {
   return (
     <div>
-      <div>
-        <section className="hero flex mb-16 justify-between items-end">
+      <div className="border-b-2 border-mainBlack mb-16 ">
+        <section className="hero flex mb-44 justify-between items-end ">
           <div className="hero-text w-[50%]">
-            <p className="text-6xl font-extrabold mb-16">
-              Hi I'm EniolaOluwa Bakare, Front-end Engineer
+            <p className="text-6xl font-semibold mb-16">
+              Hi, I'm EniolaOluwa Bakare, Front-end Engineer
             </p>
             <p className="hero-text text-mainGray text-3xl mb-10 ">
               My work is mainly focused on third-dimension modeling, texturing
@@ -25,33 +25,30 @@ function HomeProfilePage() {
           </div>
         </section>
 
-        <section className="skills">
-          <div className="main-software">
-            <p className="main-SW">Main Software</p>
-            <div className="desc">
-              <p className="main-SW-desc">
+        <section className="skills w-[60%] flex flex-col gap-16 pb-24 ">
+          <div className="main-software flex gap-24 text-mainBlack font-bold">
+            <p className="main-SW underline">Main Software</p>
+            <div className="desc w-[60%]">
+              <p className="main-SW-desc text-lg mb-10">
                 Pixologic ZBrush, Autodesk Maya, The Foundry Mari, Arnold
                 Renderer, Blender, Forger
               </p>
 
-              <div className="extra-desc">Adobe CC, Figma, Ableton</div>
+              <div className="extra-desc text-lg">Adobe CC, Figma, Ableton</div>
             </div>
           </div>
-          <div className="main-skills">
-            <p className="main-SW">Main Software</p>
-            <div className="desc">
-              <p className="main-SK-desc">
+          <div className="main-skills flex gap-24 text-mainBlack font-bold">
+            <p className="main-SW underline ">Main Software</p>
+            <div className="desc w-[60%]">
+              <p className="main-SK-desc text-lg ">
                 Organic and Polygonal Modeling, UV Layout, Texturing,
                 Retopology, Illustration, ound Design.
               </p>
-
-              <div className="extra-desc">Adobe CC, Figma, Ableton</div>
-
-              <Footer />
             </div>
           </div>
         </section>
-      </div>{" "}
+      </div>
+      <Footer />
     </div>
   );
 }

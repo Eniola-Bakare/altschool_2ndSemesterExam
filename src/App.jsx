@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
 
 import HomeProfilePage from "./components/pages/HomeProfilePage";
 import Nav from "./components/UI/Nav";
 import RepoPages from "./components/pages/RepoPages";
 
 function App() {
-  const [count, setCount] = useState(0);
   const [data, setData] = useState("");
 
   useEffect(() => {
@@ -19,11 +15,12 @@ function App() {
   }, []);
   console.log(data);
   return (
-    <>
+    <div className="flex flex-col justify-center m-24">
       <Nav />
-      {/* <HomeProfilePage /> */}
+      <HomeProfilePage />
       <RepoPages />
-    </>
+
+    </div>
   );
 }
 

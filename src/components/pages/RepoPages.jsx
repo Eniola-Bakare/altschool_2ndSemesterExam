@@ -2,7 +2,7 @@ import { useState } from "react";
 import Repo from "../UI/Repo";
 
 function RepoPages() {
-  const [repos] = useState([3, 4, 5, 3, 5]);
+  const [repos] = useState([3, 4, 2, 5]);
   return (
     <div>
       <section className="intro">

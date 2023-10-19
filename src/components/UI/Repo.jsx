@@ -10,7 +10,7 @@ function Repo() {
       </section>
 
       <section className="repo-img">
-        <img src="./assets/repoImg.jpg" alt="snapshots of repository's published site" />
+        <img src="../assets/repoImg.jpg" alt="snapshots of repository's published site" />
       </section>
     </div>
   )

@@ -1,4 +1,3 @@
-import Footer from "../UI/Footer";
 
 function HomeProfilePage() {
   return (
@@ -48,7 +47,6 @@ function HomeProfilePage() {
           </div>
         </section>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import HomeProfilePage from "./components/pages/HomeProfilePage";
 import Nav from "./components/UI/Nav";
 import RepoPages from "./components/pages/RepoPages";
+import Footer from "./components/UI/Footer";
 
 function App() {
   const [data, setData] = useState("");
@@ -19,6 +20,8 @@ function App() {
       <Nav />
       {/* <HomeProfilePage /> */}
       <RepoPages />
+
+      <Footer />
     </div>
   );
 }

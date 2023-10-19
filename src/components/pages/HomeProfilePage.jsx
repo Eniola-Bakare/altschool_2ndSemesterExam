@@ -1,12 +1,21 @@
+import { useEffect, useState } from "react";
+import { useUserContext } from "../context/userContext";
 
 function HomeProfilePage() {
+  const { data } = useUserContext();
+  const [name, setName] = useState(data?.login)
+
+  useEffect(()=>{
+    setName(data?.login)
+  }, [data])
+
   return (
     <div>
       <div className="border-b-2 border-mainBlack mb-16 ">
         <section className="hero flex mb-44 justify-between items-end ">
           <div className="hero-text w-[50%]">
             <p className="text-6xl font-semibold mb-16">
-              Hi, I'm EniolaOluwa Bakare, Front-end Engineer
+              Hi, I'm {name}, a Front-end Engineer
             </p>
             <p className="hero-text text-mainGray text-3xl mb-10 ">
               My work is mainly focused on third-dimension modeling, texturing

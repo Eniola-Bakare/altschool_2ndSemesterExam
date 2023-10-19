@@ -4,22 +4,18 @@ import HomeProfilePage from "./components/pages/HomeProfilePage";
 import Nav from "./components/UI/Nav";
 import RepoPages from "./components/pages/RepoPages";
 import Footer from "./components/UI/Footer";
+import { useUserContext } from "./components/context/userContext";
 
 function App() {
-  const [data, setData] = useState("");
-
-  useEffect(() => {
-    fetch(`https://api.github.com/users/eniola-bakare`)
-      .then((res) => res.json())
-      .then((data) => setData(data))
-      .catch((err) => console.log(err));
-  }, []);
+  const { data } = useUserContext();
   console.log(data);
+
+  if (!data) return console.log('cooking');
   return (
     <div className="flex flex-col justify-center m-24 mb-12">
       <Nav />
-      {/* <HomeProfilePage /> */}
-      <RepoPages />
+      <HomeProfilePage />
+      {/* <RepoPages /> */}
 
       <Footer />
     </div>

@@ -5,20 +5,21 @@ import Nav from "./components/UI/Nav";
 import RepoPages from "./components/pages/RepoPages";
 import Footer from "./components/UI/Footer";
 import { useUserContext } from "./components/context/userContext";
+import { RepoContextProvider } from "./components/context/ReposContext";
 
 function App() {
   const { data } = useUserContext();
   console.log(data);
 
-  if (!data) return console.log('cooking');
+  if (!data) return console.log("cooking");
   return (
-    <div className="flex flex-col justify-center m-24 mb-12">
-      <Nav />
-      <HomeProfilePage />
-      {/* <RepoPages /> */}
+      <div className="flex flex-col justify-center m-24 mb-12">
+        <Nav />
+        <HomeProfilePage />
+        {/* <RepoPages /> */}
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
   );
 }
 

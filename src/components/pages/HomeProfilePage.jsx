@@ -4,21 +4,22 @@ import { useUserContext } from "../context/userContext";
 function HomeProfilePage() {
   const { data } = useUserContext();
   const about = data?.bio?.split(/\r?\n/);
-  // const about2 = about.map(de)
   return (
     <div>
       <div className="border-b-2 border-mainBlack mb-16 ">
         <section className="hero flex mb-44 justify-between items-end ">
           <div className="hero-text w-[50%]">
             <p className="text-6xl font-semibold mb-16">
-              Hi, I'm {data?.login || "eniolaOluwa"}, a Front-end Engineer
+              Hi, I'm {data?.name || "eniolaOluwa"}, a Front-End Engineer
             </p>
             {about?.length > 0 ? (
               about.map((desc) => (
                 <p
                   key={desc}
                   className="hero-text text-mainGray text-3xl mb-10 "
-                >{desc}</p>
+                >
+                  {desc}
+                </p>
               ))
             ) : (
               <p className="hero-text text-mainGray text-3xl mb-10 ">
@@ -33,7 +34,10 @@ function HomeProfilePage() {
           </div>
 
           <div className="hero-img w-[43%] flex justify-end ">
-            <img src={data?.avatar_url || "../src/assets\heroImg.JPG"} alt="user's profile picture" />
+            <img
+              src={data?.avatar_url || "../src/assetsheroImg.JPG"}
+              alt="user's profile picture"
+            />
           </div>
         </section>
 

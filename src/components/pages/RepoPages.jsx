@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Repo from "../UI/Repo";
 import { useRepoContext } from "../context/ReposContext";
+import { Link } from "react-router-dom";
 
 function RepoPages() {
   const { repos } = useRepoContext();
@@ -24,7 +25,11 @@ function RepoPages() {
 
       <section className="repos flex flex-col">
         {reposData?.map((repo, index) => {
-          return <Repo key={repo.id} repo={repo} index={index+=1} />;
+          return (
+            <Link key={repo.id} to={`${repo.id}`}>
+              <Repo repo={repo} index={(index += 1)} />
+            </Link>
+          );
         })}
         {/* <Repo /> */}
       </section>

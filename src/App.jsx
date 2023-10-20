@@ -13,7 +13,7 @@ function App() {
 
   if (!data) return console.log("cooking");
   return (
-    <div className="flex flex-col justify-center m-24 mb-12">
+    <div className="max-w-[1440px] flex flex-col p-24 mb-12">
       <Nav />
       {/* <HomeProfilePage /> */}
       <RepoPages />

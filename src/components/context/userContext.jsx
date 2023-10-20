@@ -19,8 +19,6 @@ function UserContext({ children }) {
 
 function useUserContext() {
   const values = useContext(userContextProvider);
-  console.log(values);
-  console.log(values);
   if (!values)
     throw new Error(
       "User context has been used outside of the context provider"

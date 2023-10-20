@@ -9,17 +9,17 @@ import { RepoContextProvider } from "./components/context/ReposContext";
 
 function App() {
   const { data } = useUserContext();
-  console.log(data);
+  // console.log(data);
 
   if (!data) return console.log("cooking");
   return (
-      <div className="flex flex-col justify-center m-24 mb-12">
-        <Nav />
-        <HomeProfilePage />
-        {/* <RepoPages /> */}
+    <div className="flex flex-col justify-center m-24 mb-12">
+      <Nav />
+      {/* <HomeProfilePage /> */}
+      <RepoPages />
 
-        <Footer />
-      </div>
+      <Footer />
+    </div>
   );
 }
 

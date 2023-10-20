@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Repo from "../UI/Repo";
+import { useRepoContext } from "../context/ReposContext";
 
 function RepoPages() {
-  const [repos] = useState([3, 4, 2, 5, 7, 8, 9, 23]);
+  const { repos } = useRepoContext();
+  console.log(repos);
+  const [reposData, setReposData] = useState(["placeholder"]);
+  useEffect(() => {
+    setReposData(repos);
+  }, [repos]);
   return (
     <div>
       <section className="intro flex w-[100%] items-end mb-24">
@@ -17,9 +23,9 @@ function RepoPages() {
       <div className="down-icon text-6xl text-mainGray mb-16">↓</div>
 
       <section className="repos flex flex-col">
-        {repos.map((repo) => (
-          <Repo key={repo} />
-        ))}
+        {reposData?.map((repo, index) => {
+          return <Repo key={repo.id} repo={repo} index={index+=1} />;
+        })}
         {/* <Repo /> */}
       </section>
     </div>

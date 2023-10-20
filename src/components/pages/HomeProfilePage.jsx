@@ -3,33 +3,37 @@ import { useUserContext } from "../context/userContext";
 
 function HomeProfilePage() {
   const { data } = useUserContext();
-  const [name, setName] = useState(data?.login)
-
-  useEffect(()=>{
-    setName(data?.login)
-  }, [data])
-
+  const about = data?.bio?.split(/\r?\n/);
+  // const about2 = about.map(de)
   return (
     <div>
       <div className="border-b-2 border-mainBlack mb-16 ">
         <section className="hero flex mb-44 justify-between items-end ">
           <div className="hero-text w-[50%]">
             <p className="text-6xl font-semibold mb-16">
-              Hi, I'm {name}, a Front-end Engineer
+              Hi, I'm {data?.login || "eniolaOluwa"}, a Front-end Engineer
             </p>
-            <p className="hero-text text-mainGray text-3xl mb-10 ">
-              My work is mainly focused on third-dimension modeling, texturing
-              and rendering. I like exploring the creatures with a touch of dark
-              surrealism for characters and production.
-            </p>
-            <span className="hero-text text-mainGray text-3xl ">
-              Now I’m an interactive media design student in Istanbul ⏤
-              currently freelancing and seeking internship opportunities.
-            </span>
+            {about?.length > 0 ? (
+              about.map((desc) => (
+                <p
+                  key={desc}
+                  className="hero-text text-mainGray text-3xl mb-10 "
+                >{desc}</p>
+              ))
+            ) : (
+              <p className="hero-text text-mainGray text-3xl mb-10 ">
+                My work is mainly focused on third-dimension modeling, texturing
+                and rendering. I like exploring the creatures with a touch of
+                dark surrealism for characters and production. Now I’m an
+                interactive media design student in Istanbul ⏤ currently
+                freelancing and seeking internship opportunities.
+              </p>
+            )}
+            <span className="hero-text text-mainGray text-3xl "></span>
           </div>
 
-          <div className="hero-img w-[43%]">
-            <img src="../src/assets\heroImg.JPG" alt="user's profile picture" />
+          <div className="hero-img w-[43%] flex justify-end ">
+            <img src={data?.avatar_url || "../src/assets\heroImg.JPG"} alt="user's profile picture" />
           </div>
         </section>
 

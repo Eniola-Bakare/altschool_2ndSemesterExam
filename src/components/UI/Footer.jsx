@@ -1,4 +1,8 @@
+import { useUserContext } from "../context/userContext";
+
 function Footer() {
+  const { data } = useUserContext();
+
   return (
     <footer className="flex flex-col gap-32 ">
       <section className="contact-div flex justify-between   font-semibold">

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useUserContext } from "../context/userContext";
 
 function Footer() {
@@ -7,7 +8,9 @@ function Footer() {
     <footer className="flex flex-col gap-32 ">
       <section className="contact-div flex justify-between   font-semibold">
         <p className="w-[30%] text-3xl">
-          I am thrilled to answer to your next project &gt;
+          <Link to="/contact">
+            I am thrilled to answer to your next project &gt;
+          </Link>
         </p>
         <p className="font-semibold text-2xl flex flex-col gap-7">
           <a href="mailto:eebakare@gmail.com">eebakare@gmail.com</a>{" "}

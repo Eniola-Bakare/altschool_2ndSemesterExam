@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeProfilePage />} />
         <Route path="repositories" element={<RepoPages />}/>
-        <Route path="repositories/:name" element={<RepoDetail />} />
+        <Route path="repositories/:id" element={<RepoDetail />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Outlet />

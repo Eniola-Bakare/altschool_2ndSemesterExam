@@ -86,9 +86,7 @@ function RepoDetail() {
             &lt; Back
           </button>
         </div>
-        <p className="repo-link font-semibold absolute bottom-24 underline underline-offset-4">
-          More details &gt;
-        </p>
+
       </section>
 
       <section className="repo-img w-[50%] ">

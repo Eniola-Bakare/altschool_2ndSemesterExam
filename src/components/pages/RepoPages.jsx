@@ -11,8 +11,8 @@ function RepoPages() {
     setReposData(repos);
   }, [repos]);
   return (
-    <div>
-      <section className="intro flex w-[100%] items-end mb-24">
+    <div className="mt-36">
+      <section className="intro flex w-[100%] items-end mb-36">
         <p className="w-[40%] text-6xl text-mainBlack font-semibold ">
           Hello, I'm EniolaOluwa B.
         </p>
@@ -21,17 +21,14 @@ function RepoPages() {
           AltSchool Africa.
         </p>
       </section>
-      <div className="down-icon text-6xl text-mainGray mb-16">↓</div>
+      <div className="down-icon text-6xl text-mainGray mb-16 cursor-pointer">↓</div>
 
       <section className="repos flex flex-col">
         {reposData?.map((repo, index) => {
           return (
-            <Link key={repo.id} to={`${repo.id}`}>
-              <Repo repo={repo} index={(index += 1)} />
-            </Link>
+              <Repo key={repo.id}  repo={repo} index={(index += 1)} />
           );
         })}
-        {/* <Repo /> */}
       </section>
     </div>
   );

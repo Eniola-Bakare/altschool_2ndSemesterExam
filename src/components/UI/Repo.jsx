@@ -38,9 +38,11 @@ function Repo({ repo, index }) {
           <span className="font-semibold text-lg"> Created:</span> <br />
           <span className="">{dateFormat(repo?.created_at)}</span>
         </p>
-        <p className="repo-link font-semibold absolute bottom-24 underline underline-offset-4">
-          More details &gt;
-        </p>
+        <Link to={`${repo.id}`}>
+          <p className="repo-link font-semibold absolute bottom-24 underline underline-offset-4">
+            More details &gt;
+          </p>
+        </Link>
       </section>
 
       <section className="repo-img w-[50%] ">

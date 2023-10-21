@@ -5,7 +5,7 @@ function Footer() {
   const { data } = useUserContext();
 
   return (
-    <footer className="flex flex-col gap-32 ">
+    <footer className="flex flex-col gap-32 pb-12">
       <section className="contact-div flex justify-between   font-semibold">
         <p className="w-[30%] text-3xl">
           <Link to="/contact">

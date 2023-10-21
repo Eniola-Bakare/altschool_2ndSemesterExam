@@ -9,6 +9,7 @@ import { RepoContextProvider } from "./components/context/ReposContext";
 import { Outlet, Route, Routes } from "react-router-dom";
 import Contact from "./components/pages/Contact";
 import RepoDetail from "./components/pages/RepoDetail";
+import Error404 from "./components/pages/Error404";
 
 function App() {
   const { data } = useUserContext();
@@ -16,15 +17,15 @@ function App() {
 
   if (!data) return console.log("cooking");
   return (
-    <div className=" w-[1440px] max-w-[1440px] flex flex-col p-24 mb-12">
+    <div className="w-[1440px] max-w-[1440px] flex flex-col p-10 h-[100dvh]">
       <Nav />
       <Routes>
         <Route path="/" element={<HomeProfilePage />} />
         <Route path="repositories" element={<RepoPages />}/>
         <Route path="repositories/:id" element={<RepoDetail />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
-      <Outlet />
       <Footer />
     </div>
   );

@@ -11,7 +11,7 @@ import Error404 from "./components/pages/Error404";
 
 function App() {
   const { data } = useUserContext();
-  // console.log(data);
+  console.log(data);
 
   return (
     <div className="w-[1440px] max-w-[1440px] flex flex-col p-10 h-[100dvh]">

@@ -41,24 +41,30 @@ function HomeProfilePage() {
           </div>
         </section>
 
-        <section className="skills w-[60%] flex flex-col gap-16 pb-24 ">
-          <div className="main-software flex gap-24 text-mainBlack font-bold">
-            <p className="main-SW underline">Main Software</p>
-            <div className="desc w-[60%]">
-              <p className="main-SW-desc text-lg mb-10">
-                Pixologic ZBrush, Autodesk Maya, The Foundry Mari, Arnold
-                Renderer, Blender, Forger
+        <section className="skills w-[60%] flex flex-col pb-24 ">
+          <div className="main-software flex text-mainBlack pb-3">
+            <p className="main-SW text-3xl underline font-bold">Company:</p>
+            <div className="desc w-[60%] pl-5">
+              <p className="main-SW-desc text-2xl text-mainGray">
+                {data.company}
               </p>
 
-              <div className="extra-desc text-lg">Adobe CC, Figma, Ableton</div>
+              {/* <div className="extra-desc text-2xl text-mainGray">Adobe CC, Figma, Ableton</div> */}
             </div>
           </div>
-          <div className="main-skills flex gap-24 text-mainBlack font-bold">
-            <p className="main-SW underline ">Main Software</p>
-            <div className="desc w-[60%]">
-              <p className="main-SK-desc text-lg ">
-                Organic and Polygonal Modeling, UV Layout, Texturing,
-                Retopology, Illustration, ound Design.
+          <div className="main-skills flex text-mainBlack pb-3 ">
+            <p className="main-SW text-3xl underline font-bold">Location:</p>
+            <div className="desc w-[60%] pl-5">
+              <p className="main-SK-desc text-2xl text-mainGray ">
+                {data.location}
+              </p>
+            </div>
+          </div>
+          <div className="main-skills flex text-mainBlack pb-3">
+            <p className="main-SW text-3xl underline  font-bold">GitHub Profile:</p>
+            <div className="desc w-[60%] pl-5">
+              <p className="main-SK-desc text-2xl text-mainGray ">
+                {data.html_url}
               </p>
             </div>
           </div>

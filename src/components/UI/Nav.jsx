@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 function Nav() {
   return (
-    <div className="flex justify-between items-end mb-44 ">
+    <div className="flex justify-between items-end mb-44 w-[100%] ">
       <h1 className="logo font-black text-5xl text-mainBlack cursor-pointer">
         <Link to="/"> e.dev</Link>
       </h1>

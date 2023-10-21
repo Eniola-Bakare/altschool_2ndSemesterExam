@@ -5,13 +5,16 @@ import "./index.css";
 import { UserContext } from "./components/context/userContext.jsx";
 import { RepoContextProvider } from "./components/context/ReposContext.jsx";
 import { BrowserRouter } from "react-router-dom";
+import ErrorBoundary from "./components/pages/ErrorBoundary.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <UserContext>
         <RepoContextProvider>
-          <App />
+          <ErrorBoundary>
+            <App />
+          </ErrorBoundary>
         </RepoContextProvider>
       </UserContext>
     </BrowserRouter>

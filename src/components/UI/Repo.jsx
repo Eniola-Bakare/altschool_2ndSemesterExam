@@ -3,7 +3,6 @@ import Footer from "./Footer";
 
 function Repo({ repo, index }) {
   const id = repo?.id;
-  console.log(id);
 
   function dateFormat(dateInput = "2023-03-02T14:07:21Z") {
     const date = new Date(dateInput);

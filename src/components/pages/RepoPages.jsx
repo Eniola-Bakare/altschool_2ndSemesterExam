@@ -21,7 +21,7 @@ function RepoPages() {
           AltSchool Africa.
         </p>
       </section>
-      <div className="down-icon text-6xl text-mainGray mb-16 cursor-pointer">↓</div>
+      <div className="down-icon text-6xl text-mainGray mb-36 cursor-pointer">↓</div>
 
       <section className="repos flex flex-col">
         {reposData?.map((repo, index) => {

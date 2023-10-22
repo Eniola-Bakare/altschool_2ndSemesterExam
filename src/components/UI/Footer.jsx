@@ -5,10 +5,10 @@ function Footer() {
   const { data } = useUserContext();
 
   return (
-    <footer className="flex flex-col gap-32 pb-12 w-[100%]">
+    <footer className="flex flex-col gap-32 pb-12 w-[90%]">
       <section className="contact-div flex justify-between   font-semibold">
-        <p className="w-[30%] text-3xl">
-          <Link to="/contact">
+        <p className="text-3xl w-[30%] md:w-[40%]">
+          <Link to="/contact" className=" ">
             I am thrilled to answer to your next project &gt;
           </Link>
         </p>

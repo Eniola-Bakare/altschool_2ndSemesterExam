@@ -52,29 +52,29 @@ function RepoDetail() {
     //   <button onClick={() => navigate(-1)}>&lt; Back</button>
     // </div>
 
-    <div className="flex w-[100%] justify-between border-b border-mainBlack pb-28 mb-28  relative">
-      <section className="repoTexts flex flex-col w-[40%]">
-        <p className="project-title text-lg text-mainBlack font-bold mb-4">
+    <div className="flex w-[100%] justify-between pb-28 mb-28  relative">
+      <section className="repoTexts flex flex-col xl:w-[60%]">
+        <p className="project-title text-3xl md:text-4xl xl:text-6xl text-mainBlack font-bold mb-4">
           {/* {index || "01"} /{" "} */}
           {repoDetails?.name?.split("-")?.join(" ").toUpperCase()}
         </p>
-        <p className="project-desc text-lg text-mainBlack font-medium mb-7">
+        <p className="project-desc text-lg xl:text-3xl text-mainBlack font-medium mb-7">
           {repoDetails?.description ||
             "A short description of what the project is about"}
         </p>
         <div className="extra-desc-container flex flex-col gap-2 mt-5">
           <p className="extra-desc text-mainGray">
-            <span className="font-semibold text-lg"> Created: </span>
+            <span className="font-bold text-mainBlack text-lg"> Created: </span>
             <span className="pl-2 font-medium">
               {dateFormat(repoDetails?.created_at)}
             </span>
           </p>
           <p className="extra-desc text-mainGray">
-            <span className="font-semibold text-lg"> GitHub URL: </span>
+            <span className="font-bold text-mainBlack text-lg"> GitHub URL: </span>
             <span className="pl-2 font-medium">{repoDetails?.html_url}</span>
           </p>
           <p className="languages text-mainGray">
-            <span className="font-semibold text-lg">Languages: </span>
+            <span className="font-bold text-mainBlack text-lg">Languages: </span>
             {Array.isArray(repoLanguages) &&
               repoLanguages.map((eachLang) => (
                 <span className="pl-2 font-medium" key={eachLang}>
@@ -87,13 +87,6 @@ function RepoDetail() {
           </button>
         </div>
 
-      </section>
-
-      <section className="repo-img w-[50%] ">
-        <img
-          src="../src/assets/repoImg.jpg"
-          alt="snapshots of repository's published site"
-        />
       </section>
     </div>
   );

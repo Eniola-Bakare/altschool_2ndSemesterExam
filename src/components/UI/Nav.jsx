@@ -40,7 +40,7 @@ function Nav() {
         </NavLink>
       </ul>
       <p
-        className="nav-links  gap-20 flex md:hidden font-black text-5xl relative"
+        className="nav-links  gap-20 flex md:hidden font-black text-5xl relative cursor-pointer"
         onClick={() => setMenu(true)}
       >
         ☰
@@ -48,7 +48,7 @@ function Nav() {
       {menu && (
         <div className="responsive-menu flex flex-col gap-32 p-16 w-[70%] bg-[#d3d3d3]  absolute right-0 top-0">
           <p
-            className="nav-links gap-20 flex md:hidden font-black text-5xl self-end"
+            className="nav-links gap-20 font-black text-5xl self-end cursor-pointer"
             onClick={() => setMenu(false)}
           >
             X

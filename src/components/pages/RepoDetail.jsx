@@ -5,7 +5,6 @@ function RepoDetail() {
   const repository = useParams();
   const navigate = useNavigate();
   const repositoryId = repository?.id;
-  console.log(repositoryId);
 
   const [repoDetails, setRepoDetails] = useState({});
   const [repoLanguages, setRepoLanguages] = useState({});
@@ -39,23 +38,11 @@ function RepoDetail() {
     );
     return formattedDate;
   }
-  console.log(repoDetails);
-  console.log(repoLanguages);
-  // console.log(repoLanguages.map(lang=>console.log(lang)));
-  return (
-    // <div className=" bg-pink bg-red-500">
-    //   <p>{repoDetails?.name?.split("-")?.join(" ").toUpperCase()}</p>
-    //   <p>{repoDetails?.created_at}</p>
-    //   <p>{repoDetails?.html_url}</p>
-    //   {Array.isArray(repoLanguages) &&
-    //     repoLanguages.map((eachLang) => <p key={eachLang}>{eachLang}</p>)}
-    //   <button onClick={() => navigate(-1)}>&lt; Back</button>
-    // </div>
 
+  return (
     <div className="flex w-[100%] justify-between pb-28 mb-28  relative">
       <section className="repoTexts flex flex-col xl:w-[60%]">
         <p className="project-title text-3xl md:text-4xl xl:text-6xl text-mainBlack font-bold mb-4">
-          {/* {index || "01"} /{" "} */}
           {repoDetails?.name?.split("-")?.join(" ").toUpperCase()}
         </p>
         <p className="project-desc text-lg xl:text-3xl text-mainBlack font-medium mb-7">

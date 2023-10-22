@@ -2,15 +2,12 @@ import HomeProfilePage from "./components/pages/HomeProfilePage";
 import Nav from "./components/UI/Nav";
 import RepoPages from "./components/pages/RepoPages";
 import Footer from "./components/UI/Footer";
-import { useUserContext } from "./components/context/userContext";
 import { Route, Routes } from "react-router-dom";
 import Contact from "./components/pages/Contact";
 import RepoDetail from "./components/pages/RepoDetail";
 import Error404 from "./components/pages/Error404";
 
 function App() {
-  const { data } = useUserContext();
-  // console.log(data);
 
   return (
     <div className="w-[1440px] min-w-[375px] max-w-[1440px] flex flex-col p-7 sm:p-16 h-[100dvh]">

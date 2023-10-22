@@ -11,8 +11,6 @@ function RepoPages() {
   const [displayRepo, setDisplayRepo] = useState([]);
 
   function handleNextPage() {
-    console.log(repos.length);
-    console.log(showRepo);
     if (repos.length > showRepo) {
       setStart((prev) => (prev += 6));
       setShowEnd((prev) => (prev += 6));

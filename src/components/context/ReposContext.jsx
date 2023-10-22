@@ -1,4 +1,3 @@
-import { data } from "autoprefixer";
 import { createContext, useContext, useEffect, useState } from "react";
 
 const RepoContext = createContext();
@@ -11,7 +10,6 @@ function RepoContextProvider({ children }) {
       .then((response) => response.json())
       .then((data) => setRepos(data));
   }, []);
-  // console.log(repos);
   return (
     <RepoContext.Provider value={{ repos }}>{children}</RepoContext.Provider>
   );

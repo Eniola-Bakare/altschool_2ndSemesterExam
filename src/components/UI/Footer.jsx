@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="flex flex-col gap-32 pb-12 ">
       <section className="contact-div flex flex-col sm:flex-row items-start justify-between w-[100%] md:w-[90%] font-semibold">
-        <p className="text-lg sm:text-2xl md:text-3xl w-[60%] md:w-[45%] xl:w-[40%] text-center sm:text-start sm:w-[40%] mb-5 sm:mb-0">
+        <p className="text-lg sm:text-2xl md:text-3xl w-[60%] md:w-[45%] xl:w-[40%] text-start sm:w-[40%] mb-5 sm:mb-0">
           <Link to="/contact" className=" ">
             I am thrilled to answer to your next project &gt;
           </Link>

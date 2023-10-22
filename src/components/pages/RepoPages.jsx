@@ -30,20 +30,22 @@ function RepoPages() {
   useEffect(() => {
     setDisplayRepo(repos.slice(start, showEnd));
   }, [repos, start, showEnd]);
- 
+
   return (
     <div className="mt-36 w-[100%] flex flex-col items-start">
-      <section className="intro flex flex-col xl:flex-row items-start xl:items-end mb-36">
-        <p className="sm:w-[60%] lg:w-[70%] xl:w-[40%] text-5xl xl:text-6xl text-mainBlack font-semibold mb-5 xl:mb-0 ">
-          Hello, I'm EniolaOluwa
-        </p>
-        <p className="details sm:w-[60%] xl:w-[50%] text-lg xl:text-3xl ">
-          A final-year Law student at the University of Ibadan, and a student at
-          AltSchool Africa.
-        </p>
-      </section>
-      <div className="down-icon text-6xl text-mainGray mb-36 cursor-pointer">
-        ↓
+      <div className="hero-repo">
+        <section className="intro flex flex-col xl:flex-row items-start xl:items-end mb-16 xl:mb-36">
+          <p className="sm:w-[60%] lg:w-[70%] xl:w-[40%] text-5xl xl:text-6xl text-mainBlack font-semibold mb-5 xl:mb-0 ">
+            Hello, I'm EniolaOluwa
+          </p>
+          <p className="details sm:w-[60%] xl:w-[50%] text-lg xl:text-3xl ">
+            A final-year Law student at the University of Ibadan, and a student
+            at AltSchool Africa.
+          </p>
+        </section>
+        <div className="down-icon text-6xl text-mainGray mb-36 cursor-pointer">
+          ↓
+        </div>
       </div>
 
       <section className="repos flex flex-wrap w-[100%] gap-6 justify-center mb-10 pt-10">

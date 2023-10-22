@@ -29,7 +29,6 @@ function HomeProfilePage() {
               seeking internship opportunities.
             </p>
           )}
-          <span className="hero-text text-mainGray text-3xl "></span>
         </div>
 
         <div className="hero-img w-[43%] flex justify-end pt-10 xl:pt-0 ">
